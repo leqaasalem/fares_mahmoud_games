@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بوابة سياحة القليوبية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">القليوبية سياحة</div>
+    <nav>
+      <ul>
+        <li><a href="#main-slider">الرئيسية</a></li>
+        <li><a href="#region-slider">حسب المناطق</a></li>
+        <li><a href="#landmarks">المعالم</a></li>
+        <li><a href="#events">الفعاليات</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- فيديو بانر رئيسي -->
+  <section class="main-slider" id="main-slider">
+    <video class="bg-video" autoplay loop muted playsinline>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو.
+    </video>
+    <div class="slider-caption">
+      <h1>مرحبا بكم في بوابة سياحة القليوبية</h1>
+      <p>اكتشف المعالم، الفعاليات والأماكن المميزة بالمحافظة</p>
+    </div>
+  </section>
+  
+  <!-- سلايدر المناطق -->
+  <section class="region-slider" id="region-slider">
+    <h2>اكتشف القليوبية حسب المناطق</h2>
+    <div class="region-tabs">
+      <button class="region-btn active" onclick="showRegion(0)">شمال</button>
+      <button class="region-btn" onclick="showRegion(1)">وسط</button>
+      <button class="region-btn" onclick="showRegion(2)">جنوب</button>
+      <button class="region-btn" onclick="showRegion(3)">غرب</button>
+      <button class="region-btn" onclick="showRegion(4)">شرق</button>
+    </div>
+    <div class="region-content">
+      <!-- محتوى المنطقة يتغير بالجافاسكريبت -->
+        <div class="region-slide show">
+          <div class="region-info">
+            <img src="https://i.imgur.com/7zFQ5z7.png" alt="خريطة شمال القليوبية" class="region-map">
+            <div>
+              <h3>شمال القليوبية</h3>
+              <p>تضم بنها، طوخ، مناطق زراعية ونيلية رائعة.</p>
+            </div>
+          </div>
+          <div class="region-photos">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+        <div class="region-slide">
+          <div class="region-info">
+            <img src="https://i.imgur.com/mwPMmTv.png" alt="خريطة وسط القليوبية" class="region-map">
+            <div>
+              <h3>وسط القليوبية</h3>
+              <p>مشهورة بقصر محمد علي والحدائق التاريخية.</p>
+            </div>
+          </div>
+          <div class="region-photos">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+        <div class="region-slide">
+          <div class="region-info">
+            <img src="https://i.imgur.com/o9uN1v8.png" alt="خريطة جنوب القليوبية" class="region-map">
+            <div>
+              <h3>جنوب القليوبية</h3>
+              <p>مناطق أثرية وطبيعة هادئة.</p>
+            </div>
+          </div>
+          <div class="region-photos">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+        <div class="region-slide">
+          <div class="region-info">
+            <img src="https://i.imgur.com/1vQhXnZ.png" alt="خريطة غرب القليوبية" class="region-map">
+            <div>
+              <h3>غرب القليوبية</h3>
+              <p>معالم ريفية وأنشطة زراعية وسياحة بيئية.</p>
+            </div>
+          </div>
+          <div class="region-photos">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+        <div class="region-slide">
+          <div class="region-info">
+            <img src="https://i.imgur.com/mwPMmTv.png" alt="خريطة شرق القليوبية" class="region-map">
+            <div>
+              <h3>شرق القليوبية</h3>
+              <p>أماكن صناعية وأسواق شعبية.</p>
+            </div>
+          </div>
+          <div class="region-photos">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80" alt="">
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- باقي الموقع كما هو (معالم، فعاليات، تواصل) -->
+  <section class="landmarks" id="landmarks">
+    <h2>أشهر معالم القليوبية</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="قصر محمد علي">
+        <h3>قصر محمد علي</h3>
+        <p>واحد من أجمل القصور التاريخية في مصر.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="حديقة الحيوان">
+        <h3>حديقة الحيوان ببنها</h3>
+        <p>وجهة مثالية للعائلات والأطفال.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="النيل">
+        <h3>كورنيش النيل</h3>
+        <p>استمتع بجمال النيل والمقاهي والمطاعم.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="events" id="events">
+    <h2>الفعاليات القادمة</h2>
+    <ul class="events-list">
+      <li>
+        <strong>مهرجان الفنون الشعبية</strong> - 20 يوليو 2025
+      </li>
+      <li>
+        <strong>سباق الدراجات</strong> - 5 أغسطس 2025
+      </li>
+      <li>
+        <strong>معرض المنتجات التراثية</strong> - 15 سبتمبر 2025
+      </li>
+    </ul>
+  </section>
+  
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" id="name" placeholder="الاسم" required>
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <textarea id="message" placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <p id="form-success" style="display:none;color:green;">تم إرسال رسالتك بنجاح!</p>
+  </section>
+  
+  <footer>
+    &copy; 2025 بوابة سياحة القليوبية
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
