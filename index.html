@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>لعبة فارس</title>
   <style>
     body {
@@ -21,8 +21,12 @@
     }
 
     @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
     }
 
     .game-container {
@@ -32,12 +36,23 @@
       border: 5px dashed #ff90b3;
       border-radius: 20px;
       width: fit-content;
+      /* لجعل الحاوية ثابتة */
+      position: relative;
+      overflow: hidden; /* لمنع ظهور أي تمرير */
     }
 
     iframe {
+      display: block;
+      margin: 0 auto;
       width: 800px;
       height: 600px;
       border-radius: 10px;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none !important;
+      animation: none !important;
+      border: none;
     }
 
     .credit {
@@ -55,14 +70,20 @@
       margin-top: 20px;
       width: 150px;
       border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       animation: float 3s ease-in-out infinite;
     }
 
     @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -70,13 +91,15 @@
   <h1>مرحبًا في عالم فارس!</h1>
 
   <div class="game-container">
-    <iframe src="https://scratch.mit.edu/projects/1201793549/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <iframe
+      src="https://scratch.mit.edu/projects/1201793549/embed"
+      allowtransparency="true"
+      scrolling="no"
+      allowfullscreen
+    ></iframe>
   </div>
 
-  <div class="credit">
-    🎮 اللعبة من تصميم الطفل المبدع: فارس 👦
-  </div>
+  <div class="credit">🎮 اللعبة من تصميم الطفل المبدع: فارس 👦</div>
 
-  <img src="0f462315-a3f4-4102-9121-8d5b884b05fa.png" alt="صورة لطيفة" class="cute-image">
 </body>
 </html>
